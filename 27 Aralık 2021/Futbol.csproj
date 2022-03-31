@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{36439AE2-6A3F-4CF1-92FA-E7ACB01AFC1B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Futbol</RootNamespace>
+    <AssemblyName>Futbol</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBManager\FutbolcularDB.cs" />
+    <Compile Include="DBManager\FutbolcuMN.cs" />
+    <Compile Include="DBManager\LigMN.cs" />
+    <Compile Include="DBManager\TakımMN.cs" />
+    <Compile Include="ds_ilişkiler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_ilişkiler.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Futbolcu Bilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Futbolcu Bilgi.Designer.cs">
+      <DependentUpon>Futbolcu Bilgi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KadrolarıGör.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KadrolarıGör.Designer.cs">
+      <DependentUpon>KadrolarıGör.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LigBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LigBilgileri.Designer.cs">
+      <DependentUpon>LigBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiglerdekiFutbolcular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LiglerdekiFutbolcular.Designer.cs">
+      <DependentUpon>LiglerdekiFutbolcular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Futbolcular.cs" />
+    <Compile Include="Hoşgeldiniz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoşgeldiniz.Designer.cs">
+      <DependentUpon>Hoşgeldiniz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ligler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Takımlar.cs" />
+    <Compile Include="TakımBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakımBilgileri.Designer.cs">
+      <DependentUpon>TakımBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakımlarıÖğren.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakımlarıÖğren.Designer.cs">
+      <DependentUpon>TakımlarıÖğren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakımveFutbolcuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TakımveFutbolcuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TakımVeFutbolcularDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TakımVeFutbolcularDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Futbolcu Bilgi.resx">
+      <DependentUpon>Futbolcu Bilgi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoşgeldiniz.resx">
+      <DependentUpon>Hoşgeldiniz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KadrolarıGör.resx">
+      <DependentUpon>KadrolarıGör.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LigBilgileri.resx">
+      <DependentUpon>LigBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiglerdekiFutbolcular.resx">
+      <DependentUpon>LiglerdekiFutbolcular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TakımBilgileri.resx">
+      <DependentUpon>TakımBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakımlarıÖğren.resx">
+      <DependentUpon>TakımlarıÖğren.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ds_ilişkiler.xsc">
+      <DependentUpon>ds_ilişkiler.xsd</DependentUpon>
+    </None>
+    <None Include="ds_ilişkiler.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_ilişkiler.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_ilişkiler.xss">
+      <DependentUpon>ds_ilişkiler.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TakımveFutbolcuDataSet.xsc">
+      <DependentUpon>TakımveFutbolcuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TakımveFutbolcuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TakımveFutbolcuDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TakımveFutbolcuDataSet.xss">
+      <DependentUpon>TakımveFutbolcuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TakımVeFutbolcularDataSet.xsc">
+      <DependentUpon>TakımVeFutbolcularDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TakımVeFutbolcularDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TakımVeFutbolcularDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TakımVeFutbolcularDataSet.xss">
+      <DependentUpon>TakımVeFutbolcularDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\324728.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200x627-dunyanin-en-iyi-90-futbolcusu-aciklandi-iste-mevki-mevki-o-liste-1574598208185.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\050920121125302607806_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-football-player-clip-art-rugby-ball-vector-5b5ed3e83b3122.5763890215329412882425.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-football-player-computer-icons-futsal-5b3b109dd42134.5862029115305975338689.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-football-player-sport-football-icon-5b0eea2f614736.5533393415277041113985.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_1982962-stock-illustration-search-icon-button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3247281.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
